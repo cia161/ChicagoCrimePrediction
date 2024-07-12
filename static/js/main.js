@@ -1,5 +1,6 @@
+// static/js/main.js
+import API_KEY from './config.js';
 
-import API_KEY from '../../config/config.js';
 function loadGoogleMapsAPI() {
     const script = document.createElement('script');
     script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}`;
