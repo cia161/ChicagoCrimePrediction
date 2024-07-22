@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>User Location Map</title>
-    <script type="module" src="/static/js/main.js"></script>
-</head>
-<body>
-    <h1>User Location Map</h1>
-    <div id="map" style="height: 500px; width: 100%;"></div>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}Home - Chicago Crime Prediction{% endblock %}
+
+{% block content %}
+<h1>Chicago Crime Prediction</h1>
+<div id="map"></div>
+<p id="address" style="margin-top: 20px; font-size: 18px; text-align: center; color: #343a40;"></p>
+{% endblock %}
