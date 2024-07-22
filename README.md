@@ -11,23 +11,25 @@
     git clone https://github.com/yourusername/yourrepository.git
     cd yourrepository
     ```
+2. **Enter the repo in terminal**:
 
-2. **Set up a Python virtual environment**:
+
+3. **Set up a Python virtual environment**:
     ```bash
     python3 -m venv venv
     ```
 
-3. **Activate the virtual environment**:
+4. **Activate the virtual environment**:
     ```bash
     source venv/bin/activate
     ```
 
-4. **Install Flask**:
+5. **Install Flask**:
     ```bash
     pip install Flask
     ```
 
-5. **Configure API Key**:
+6. **Configure API Key**:
     - Create a file `config.js` in the `static/js` folder.
     - Add your Google Maps API Key in `config.js`:
       ```javascript
@@ -35,12 +37,12 @@
       export default API_KEY;
       ```
 
-6. **Run the Flask App**:
+7. **Run the Flask App**:
     ```bash
     python app.py
     ```
 
-7. **Open your web browser** and navigate to `http://127.0.0.1:5000/` to see your application in action.
+8. **Open your web browser** and navigate to `http://127.0.0.1:5000/` to see your application in action.
 
 ## Deactivating the Virtual Environment
 
