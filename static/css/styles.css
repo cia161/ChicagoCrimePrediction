@@ -1,3 +1,4 @@
+/* Existing styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
@@ -27,3 +28,35 @@ h1 {
     border-radius: 8px;
 }
 
+/* Additional styles for team member profiles */
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.member {
+    text-align: center;
+    margin: 15px;
+    flex-basis: 20%;  /* Adjust based on your preferred width */
+}
+
+.member img {
+    width: 150px;  /* Ensures all images are the same size */
+    height: 150px;
+    border-radius: 50%; /* Makes images circular */
+    object-fit: cover; /* Ensures images cover the area properly without distortion */
+    border: 3px solid #06386d; 
+}
+
+.member h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color:  #06386d; 
+}
+
+.member p {
+    color: #666;
+    font-size: 0.9em;
+}

@@ -3,19 +3,31 @@
 {% block title %}About - Chicago Crime Prediction{% endblock %}
 
 {% block content %}
-<h1>About the Project</h1>
-<p>This application, part of a broader research initiative, predicts crime in Chicago based on user location. Developed as a component of a project for the altREU program, it aims to explore and compare the effectiveness of different predictive models in crime forecasting.</p>
+<h1>About</h1>
+<p>This application predicts crime in Chicago based on user location. It is developed as part of a research project by a team of dedicated students from the University of Illinois at Urbana-Champaign.</p>
 
-<h2>Team Members</h2>
-<p>We are four college students from the University of Illinois at Urbana-Champaign, working under the guidance of the teuscher-lab during the summer of 2024:</p>
-<ul>
-    <li>Celina Anwar - Majoring in Computer Science</li>
-    <li>Sonika Tamilarasan - Majoring in Computer Science and Economics</li>
-    <li>Sahana Hariharan - Majoring in Computer Science and Statistics</li>
-    <li>Sumaiya Farook - Majoring in Computer Science and Crop Science</li>
-</ul>
+<div class="team-members">
+    <div class="member">
+        <img src="{{ url_for('static', filename='images/Celina.jpg') }}" alt="Celina Anwar">
+        <h3>Celina Anwar</h3>
+        <p>Major: Computer Science</p>
+    </div>
+    <div class="member">
+        <img src="{{ url_for('static', filename='images/Sonika.jpg') }}" alt="Sonika Tamilarasan">
+        <h3>Sonika Tamilarasan</h3>
+        <p>Major: Computer Science + Economics</p>
+    </div>
+    <div class="member">
+        <img src="{{ url_for('static', filename='images/Sahana.jpg') }}" alt="Sahana Hariharan">
+        <h3>Sahana Hariharan</h3>
+        <p>Major: Computer Science + Statistics</p>
+    </div>
+    <div class="member">
+        <img src="{{ url_for('static', filename='images/Sumaiya.png') }}" alt="Sumaiya Farook">
+        <h3>Sumaiya Farook</h3>
+        <p>Major: Computer Science + Crop Science</p>
+    </div>
+</div>
 
-<h2>Research Focus</h2>
-<p>Our research primarily focuses on the application of two advanced predictive models—Random Forest and Long Short-Term Memory (LSTM) models—to assess and compare their probability accuracies in predicting crime locations. This project not only helps in understanding the dynamic nature of crime but also in evaluating the potential of different machine learning techniques in real-world applications.</p>
-
+<p>This project is a component of the altREU program and is conducted under the guidance of the Teuscher Lab during the summer of 2024. The goal is to compare the effectiveness of a Random Forest model and an LSTM model in predicting the probability of crime occurrences with a focus on the accuracy and ethical implications of predictive modeling.</p>
 {% endblock %}
