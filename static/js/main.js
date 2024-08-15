@@ -32,7 +32,7 @@ function initMap() {
                         var address = results[0].formatted_address;
                         document.getElementById('address').textContent = address;
                         
-                        // check if the location is in Chicago
+                        // Check if the location is in Chicago
                         var inChicago = false;
                         for (var i = 0; i < results[0].address_components.length; i++) {
                             if (results[0].address_components[i].types.includes("locality") &&
@@ -42,9 +42,13 @@ function initMap() {
                             }
                         }
                         
-                        // show a notification if not in Chicago
-                        if (!inChicago) {
+                        if (inChicago) {
+                            // Fetch crime predictions for the user's location
+                            fetchPredictions(latitude, longitude);
+                        } else {
+                            // Show a notification and update results
                             alert("You are not in Chicago!");
+                            document.getElementById('results').innerHTML = '<h2>No probabilities available for your location</h2>';
                         }
                     } else {
                         document.getElementById('address').textContent = 'No results found';
@@ -59,4 +63,27 @@ function initMap() {
     }
 }
 
+// Function to fetch crime predictions from the server
+function fetchPredictions(lat, lon) {
+    fetch('/predict', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ latitude: lat, longitude: lon })
+    })
+    .then(response => response.json())
+    .then(data => {
+        let resultDiv = document.getElementById('results');
+        resultDiv.innerHTML = '<h2>Predicted Crimes:</h2>';
+        data.forEach(crime => {
+            resultDiv.innerHTML += `<p>${crime[0]}: ${crime[1].toFixed(2)}</p>`;
+        });
+    })
+    .catch(error => {
+        console.error('Error fetching predictions:', error);
+    });
+}
+
+// Load Google Maps API and initialize the map
 window.onload = loadGoogleMapsAPI;

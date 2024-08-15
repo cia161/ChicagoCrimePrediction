@@ -4,7 +4,14 @@
 
 {% block content %}
 <h1>Chicago Crime Prediction</h1>
-<div id="map"></div>
+<div id="map" style="height: 500px; width: 100%;"></div>
 <p id="address" style="margin-top: 20px; font-size: 18px; text-align: center; color: #343a40;"></p>
+
+<!-- Section to display prediction results -->
+<div id="results" style="margin-top: 20px; font-size: 18px; text-align: center; color: #343a40;">
+    <h2>Predicted Crimes:</h2>
+    <p>Loading predictions...</p>
+</div>
+
 <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
 {% endblock %}
