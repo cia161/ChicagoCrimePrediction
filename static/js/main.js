@@ -1,4 +1,5 @@
 // Remove the import statement, as the API_KEY is now passed directly from the HTML
+import API_KEY from './config.js'; // This line was added for Render
 
 function loadGoogleMapsAPI() {
     const script = document.createElement('script');
