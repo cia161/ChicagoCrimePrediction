@@ -74,10 +74,16 @@ function fetchPredictions(lat, lon) {
     })
     .then(response => response.json())
     .then(data => {
-        let resultDiv = document.getElementById('results');
-        resultDiv.innerHTML = '<h2>Predicted Crimes:</h2>';
+        let predictionList = document.getElementById('predicted-crimes');
+        
+        // Clear the existing list items
+        predictionList.innerHTML = '';
+
+        // Add new list items for each predicted crime
         data.forEach(crime => {
-            resultDiv.innerHTML += `<p>${crime[0]}: ${crime[1].toFixed(2)}</p>`;
+            let listItem = document.createElement('li');
+            listItem.textContent = `${crime[0].toLowerCase().replace(/\b\w/g, c => c.toUpperCase())}: ${crime[1].toFixed(2)}`;
+            predictionList.appendChild(listItem);
         });
     })
     .catch(error => {

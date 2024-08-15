@@ -8,9 +8,14 @@
 <p id="address" style="margin-top: 20px; font-size: 18px; text-align: center; color: #343a40;"></p>
 
 <!-- Section to display prediction results -->
-<div id="results" style="margin-top: 20px; font-size: 18px; text-align: center; color: #343a40;">
-    <h2>Predicted Crimes:</h2>
-    <p>Loading predictions...</p>
+<div id="results" style="margin-top: 30px; text-align: center;">
+    <h2 style="color: #343a40;">Top 5 Predicted Crime Probabilities</h2>
+    <ul id="predicted-crimes" style="list-style-type: none; padding: 0; font-size: 18px; color: #343a40;">
+        <li>Loading predictions...</li>
+    </ul>
+    <p style="margin-top: 20px; font-size: 14px; color: #ff6f61;">
+        <strong>Caution:</strong> These predictions are based on historical data and may not accurately represent real-time crime patterns. Always exercise personal judgment and stay aware of your surroundings.
+    </p>
 </div>
 
 <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
