@@ -7,6 +7,7 @@ import json
 import numpy as np
 from tensorflow.keras.models import load_model
 import pickle
+import os
 
 app = Flask(__name__)
 
@@ -17,7 +18,9 @@ with open('label_encoder.pkl', 'rb') as f:
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    # Access the API key from the environment variable
+    api_key = os.getenv('GOOGLE_MAPS_API_KEY')
+    return render_template('index.html', api_key=api_key)
 
 @app.route('/about')
 def about():
