@@ -1,3 +1,14 @@
+## Chicago Crime Predictive Analysis
+
+This project aims to enhance community safety in Chicago by predicting future crimes and spreading awareness. Using the LSTM predictive model, we hope to provide valuable insights for future analysts to improve crime prediction efforts in other cities and regions. 
+
+We are aware that although predictive models can be a useful tool, factors such as data quality, reporting biases, and model limitations, can impact outcomes of model predictions. So in addition to this, we implemented a heat map using arrest data categorized by race, and by doing so, we hope that others can approach this data with a critical eye and remain aware of these limitations.
+
+## Technologies
+- Python 3.x
+- Flask
+- LSTM via TensorFlow library
+
 
 ## Prerequisites
 
